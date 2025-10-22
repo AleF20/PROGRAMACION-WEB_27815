@@ -1,0 +1,10 @@
+ARCHIVO NUMERO 1
+ELABORADO EN UBUNTU
+PASOS PARA SUBIR AL GIT
+echo "# PROGRAMACION-WEB_27815" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/AleF20/PROGRAMACION-WEB_27815.git
+git push -u origin main
