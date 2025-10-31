@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Interno</title>
+    <style>
+        *{
+            color: black;
+            margin: 20px;
+            background-color: #E8F5FD;
+        }*
+
+        .check{
+            width: 15px;
+            height: 15px;
+            display:inline;
+            background-color: blue;
+            align-content: right;
+        }
+
+        #colores{
+            border-color:#689EC2;
+            border-radius: 4px;
+            border-style:solid;
+            text-align: center;
+            width: 120px;
+            height: 20px;
+            text-transform: capitalize;
+        }
+
+        .enunciado{
+            font-size: 15px;
+            font-family:'Montserrat', sans-serif;
+            user-select: all;
+        }
+
+        #opciones{
+            text-align: center;
+            font-weight: 600;
+            color: #01022e;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center; color: black; text-shadow: aqua 1px 2px; font-style: italic;">
+        Archivo Formulario Interno
+    </h1>
+    <form action="server.html" method="get">
+        
+        <br>
+        <!--Campo input tipo texto.-->
+        <label for="nombre" class="enunciado">NOMBRE:</label> <br>
+        <!-- Propiedad text-decoration : valor underline -->
+        <input 
+            type="text"
+            id="nombre"
+            name="nombre"
+            value="Daniela Alejandra"
+            style="font-size: 15px; border: 4px; background-color: rgb(191, 238, 236); text-decoration: underline; text-transform: capitalize;"
+        >
+        <br><br>
+
+        <!--Campo text area-->
+        <label for="comentario" class="enunciado">COMENTARIO:</label><br>
+        <textarea 
+            class="comentario"
+            name="comentario" 
+            id="comentario"
+            placeholder="Ingrese un comentario"
+            rows="4" 
+            cols="110"
+            style="color: #01022e;resize:none; font-style: italic; font-size: large; font-family: serif;"
+        > </textarea>
+        <br><br>
+
+        <!--Elemento select con al menos tres opciones.-->
+        <label for="colores" class="enunciado">COLORES:</label><br>
+        <select name="colores" id="colores">
+            <option value="rosa" style="background-color: pink;">rosa</option>
+            <option value="magenta" style="background-color: magenta;">magenta</option>
+            <option value="turquesa" style="background-color: aqua;">turquesa</option>
+            <option value="morado" style="background-color: purple;">morado</option>
+        </select>
+        <br><br>
+        
+        <!--Campo checkbox.-->
+        <label for="producto" class="enunciado">PRODUCTOS ELECTRONICOS:</label><br>
+        <label for="AUDIFONOS" id="opciones">AUDIFONOS</label>
+        <input 
+            class="check"
+            type="checkbox" 
+            name="producto[]" 
+            id="AUDIFONOS" 
+            value="AUDIFONOS"
+        >
+        <label for="MONITOR" id="opciones">MONITOR</label>
+        <input 
+            class="check"
+            type="checkbox" 
+            name="producto[]" 
+            id="MONITOR" 
+            value="MONITOR"
+        >
+        <label for="LAPTOP" id="opciones">LAPTOP</label>
+        <input 
+            class="check"
+            type="checkbox" 
+            name="producto[]" 
+            id="LAPTOP" 
+            value="LAPTOP"
+        >
+        <br><br>
+
+        <!--Campo input dos radio (por ejemplo, para seleccionar género).-->
+        <label class="enunciado">GENERO:</label><br>
+        <label for="hombre" style=" color: rgb(12, 66, 87); text-align: right; font-family: Lucida Sans', 'Lucida Sans Regular;">
+            HOMBRE
+        </label>
+        <input 
+            class="genero" 
+            type="radio" 
+            name="hombre" 
+            id="hombre" 
+            value="hombre" 
+        >
+        <label for="mujer" style=" color: rgb(87, 12, 87); text-align: right; font-family: Lucida Sans', 'Lucida Sans Regular;">
+            MUJER
+        </label>
+        <input 
+            class="genero" 
+            type="radio" 
+            name="mujer" 
+            id="mujer" 
+            value="mujer" 
+            checked
+            
+        >
+
+    </form>
+</body>
+</html>
